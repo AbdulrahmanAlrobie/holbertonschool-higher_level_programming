@@ -11,5 +11,4 @@ def new_in_list(my_list, idx, element):
     copy[idx] = element
     return (copy)
     
-
-    # Press Enter here to add a newline
+# Press Enter here to add a newline

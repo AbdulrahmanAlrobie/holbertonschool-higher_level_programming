@@ -10,6 +10,5 @@ def print_matrix_integer(matrix=[[]]):
                 if j != (len(matrix[i]) - 1):
                     print(" ", end="")
 
-        print("")
-        
-        # Press Enter here to add a newline
+        print("")        
+# Press Enter here to add a newline

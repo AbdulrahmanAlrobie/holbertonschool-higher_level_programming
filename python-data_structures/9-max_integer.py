@@ -13,6 +13,4 @@ def max_integer(my_list=[]):
             big = my_list[i]
 
     return (big)
-    
-
-    # Press Enter here to add a newline
+# Press Enter here to add a newline
