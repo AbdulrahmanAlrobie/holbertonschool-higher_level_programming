@@ -24,8 +24,8 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             payload = {"name": "John", "age": 30, "city": "New York"}
             self.wfile.write(json.dumps(payload).encode('utf-8'))
         elif self.path == '/status':
-            self._set_headers(200, 'application/json')
-            self.wfile.write(json.dumps({"status": "OK"}).encode('utf-8'))
+            self._set_headers(200, 'text/plain')
+            self.wfile.write(b"OK")
         else:
             self._set_headers(404, 'text/plain')
             self.wfile.write(b"Endpoint not found")
@@ -35,7 +35,6 @@ def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
     """Start the HTTP server."""
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    print(f"Starting server on port {port}...")
     httpd.serve_forever()
 
 
